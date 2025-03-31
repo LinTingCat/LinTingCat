@@ -3,82 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <title>Lin的</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://public.codepenassets.com/css/normalize-5.0.0.min.css">
+<link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
 <title>溫度轉換器</title>
-  <style>
-    .container {
-      width: 300px;
-      margin: 50px auto;
-      text-align: center;
-    }
+<style>
+  .container {
+    width: 300px;
+    margin: 50px auto;
+    text-align: center;
+  }
 
-    .input-group {
-      margin-bottom: 10px;
-    }
+  .input-group {
+    margin-bottom: 10px;
+  }
 
-    label {
-      display: block;
-      margin-bottom: 5px;
-    }
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
 
-    input[type="number"], select {
-      width: 100%;
-      padding: 8px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
+  input[type="number"],
+  select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
 
-    button {
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
 
-    #result {
-      margin-top: 20px;
-      font-weight: bold;
-      border: 1px solid #ccc; /* 輸出格邊框 */
-      padding: 10px; /* 輸出格內距 */
-      min-height: 20px; /* 輸出格最小高度 */
-    }
-  </style>
-  <script>
-    function celsiusToFahrenheit(celsius) {
-      return (celsius * 9/5) + 32;
-    }
+  #result {
+    margin-top: 20px;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    /* 輸出格邊框 */
+    padding: 10px;
+    /* 輸出格內距 */
+    min-height: 20px;
+    /* 輸出格最小高度 */
+  }
+</style>
+<script>
+  function celsiusToFahrenheit(celsius) {
+    return (celsius * 9 / 5) + 32;
+  }
 
-    function fahrenheitToCelsius(fahrenheit) {
-      return (fahrenheit - 32) * 5/9;
-    }
+  function fahrenheitToCelsius(fahrenheit) {
+    return (fahrenheit - 32) * 5 / 9;
+  }
 
-    function convertTemperature() {
-      let temperature = parseFloat(document.getElementById('temperature').value);
-      let from = document.getElementById('from').value;
-      let to = document.getElementById('to').value;
-      let result;
-
-      if (from === 'celsius' && to === 'fahrenheit') {
-        result = celsiusToFahrenheit(temperature).toFixed(2);
-        document.getElementById('result').textContent = `${temperature} 攝氏 = ${result} 華氏`;
-      } else if (from === 'fahrenheit' && to === 'celsius') {
-        result = fahrenheitToCelsius(temperature).toFixed(2);
-        document.getElementById('result').textContent = `${temperature} 華氏 = ${result} 攝氏`;
-      } else if (from === to){
-        result = temperature.toFixed(2);
-        document.getElementById('result').textContent = `${temperature} ${from} = ${result} ${to}`;
-      } else {
-        document.getElementById('result').textContent = '無效的轉換';
-      }
+  function convertTemperature() {
+    let temperature = parseFloat(document.getElementById('temperature').value);
+    let from = document.getElementById('from').value;
+    let to = document.getElementById('to').value;
+    let result;
+    if (from === 'celsius' && to === 'fahrenheit') {
+      result = celsiusToFahrenheit(temperature).toFixed(2);
+      document.getElementById('result').textContent = `${temperature} 攝氏 = ${result} 華氏`;
+    } else if (from === 'fahrenheit' && to === 'celsius') {
+      result = fahrenheitToCelsius(temperature).toFixed(2);
+      document.getElementById('result').textContent = `${temperature} 華氏 = ${result} 攝氏`;
+    } else if (from === to) {
+      result = temperature.toFixed(2);
+      document.getElementById('result').textContent = `${temperature} ${from} = ${result} ${to}`;
+    } else {
+      document.getElementById('result').textContent = '無效的轉換';
     }
-  </script>
+  }
+</script>
 </head>
+
 <body>
   <div class="container">
     <h1>Lin的溫度轉換器</h1>
@@ -104,6 +109,7 @@
     <div id="result"></div>
   </div>
 </body>
+
 </html>
 <!-- partial -->
   
