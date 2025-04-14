@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) 2025 106 05林琬庭 (https://codepen.io/106-05/pen/bNGrvdg)
+Copyright (c) 2025 106 05林琬庭 (https://codepen.io/106-05/pen/azbxEGG)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
